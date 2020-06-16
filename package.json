@@ -30,8 +30,9 @@
     "migrate": "node ./dist/migrate",
     "openapi-spec": "node ./dist/openapi-spec",
     "prestart": "npm run build",
-    "start": "node -r source-map-support/register .",
-    "clean": "lb-clean dist *.tsbuildinfo .eslintcache"
+    "server": "node -r source-map-support/register .",
+    "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
+    "start": "npm-run-all prestart server"
   },
   "repository": {
     "type": "git"
@@ -53,6 +54,7 @@
     "@loopback/rest-explorer": "^2.2.4",
     "@loopback/service-proxy": "^2.3.2",
     "loopback-connector-mongodb": "^5.2.3",
+    "npm-run-all": "^4.1.5",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
