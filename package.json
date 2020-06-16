@@ -35,7 +35,7 @@
     "heroku:cli": "npm i -g @loopback/cli",
     "heroku:build": "npm i -g @loopback/build",
     "heroku:post-postbuild": "npm run build",
-    "heroku:start": "node .",
+    "heroku:start": "set PORT=80&&node .",
     "heroku": "npm-run-all heroku:cli heroku:build heroku:post-postbuild heroku:start"
   },
   "repository": {
