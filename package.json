@@ -32,7 +32,10 @@
     "prestart": "npm run build",
     "server": "node -r source-map-support/register .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
-    "start": "npm-run-all prestart server"
+    "heroku:install": "npm install",
+    "heroku:build": "npm run build",
+    "heroku:server": "node -r source-map-support/register .",
+    "start": "npm-run-all heroku:install heroku:build heroku:server"
   },
   "repository": {
     "type": "git"
