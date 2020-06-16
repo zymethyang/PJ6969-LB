@@ -32,9 +32,11 @@
     "prestart": "npm run build",
     "start": "node -r source-map-support/register .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
+    "heroku:cli": "npm i -g @loopback/cli",
+    "heroku:build": "npm i -g @loopback/build",
     "heroku:post-postbuild": "npm run build",
     "heroku:start": "node .",
-    "heroku": "npm-run-all heroku:post-postbuild heroku:start"
+    "heroku": "npm-run-all heroku:cli heroku:build heroku:post-postbuild heroku:start"
   },
   "repository": {
     "type": "git"
