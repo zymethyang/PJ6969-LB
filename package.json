@@ -29,8 +29,7 @@
     "docker:run": "docker run -p 3000:3000 -d pj6969-be",
     "migrate": "node ./dist/migrate",
     "openapi-spec": "node ./dist/openapi-spec",
-    "prestart": "npm run build",
-    "start": "node -r source-map-support/register .",
+    "start": "node .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache"
   },
   "repository": {
